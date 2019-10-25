@@ -1,0 +1,1190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C48DFDBB-7A12-440B-B6D6-CDAAF5B3DEDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SisPronaSur</RootNamespace>
+    <AssemblyName>SisPronaSur</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>montoncito.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="libreria, Version=1.0.2.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\libreria.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="wd220net4, Version=22.0.0.0, Culture=neutral, PublicKeyToken=4173916b013faa00, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\wd220net4.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acesso\FrmCargar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acesso\FrmCargar.Designer.cs">
+      <DependentUpon>FrmCargar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acesso\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acesso\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acesso\FrmPorxLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acesso\FrmPorxLogin.Designer.cs">
+      <DependentUpon>FrmPorxLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmAyuda.Designer.cs">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmBusVentaGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmBusVentaGeneral.Designer.cs">
+      <DependentUpon>FrmBusVentaGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConAdelanto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConAdelanto.Designer.cs">
+      <DependentUpon>FrmConAdelanto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConAlmTiendaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConAlmTiendaAdmin.Designer.cs">
+      <DependentUpon>FrmConAlmTiendaAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConGasto.Designer.cs">
+      <DependentUpon>FrmConGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConPendiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConPendiente.Designer.cs">
+      <DependentUpon>FrmConPendiente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConPrestamo.Designer.cs">
+      <DependentUpon>FrmConPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConProveedor.Designer.cs">
+      <DependentUpon>FrmConProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConSarandeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConSarandeo.Designer.cs">
+      <DependentUpon>FrmConSarandeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConSarandeoGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConSarandeoGeneral.Designer.cs">
+      <DependentUpon>FrmConSarandeoGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultaAdelanto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultaAdelanto.Designer.cs">
+      <DependentUpon>FrmConsultaAdelanto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConVentaGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConVentaGeneral.Designer.cs">
+      <DependentUpon>FrmConVentaGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConCompras.Designer.cs">
+      <DependentUpon>FrmConCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetAdelanto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetAdelanto.Designer.cs">
+      <DependentUpon>FrmDetAdelanto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlmacen.Designer.cs">
+      <DependentUpon>FrmAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlmacenGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlmacenGeneral.Designer.cs">
+      <DependentUpon>FrmAlmacenGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlmGenConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlmGenConfirm.Designer.cs">
+      <DependentUpon>FrmAlmGenConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCaja.Designer.cs">
+      <DependentUpon>FrmCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfirmacion.Designer.cs">
+      <DependentUpon>FrmConfirmacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetPrestamo.Designer.cs">
+      <DependentUpon>FrmDetPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenerarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenerarCompra.Designer.cs">
+      <DependentUpon>FrmGenerarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMezclarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMezclarProducto.Designer.cs">
+      <DependentUpon>FrmMezclarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamo.Designer.cs">
+      <DependentUpon>FrmPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegGasto.Designer.cs">
+      <DependentUpon>FrmRegGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSarandeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSarandeo.Designer.cs">
+      <DependentUpon>FrmSarandeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentaGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentaGeneral.Designer.cs">
+      <DependentUpon>FrmVentaGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Impresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impresion.Designer.cs">
+      <DependentUpon>Impresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManCargo.Designer.cs">
+      <DependentUpon>FrmManCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManCliente.Designer.cs">
+      <DependentUpon>FrmManCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManPersonal.Designer.cs">
+      <DependentUpon>FrmManPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManProducto.Designer.cs">
+      <DependentUpon>FrmManProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManProveedor.Designer.cs">
+      <DependentUpon>FrmManProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManTipoGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManTipoGasto.Designer.cs">
+      <DependentUpon>FrmManTipoGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmManTipoProducto.Designer.cs">
+      <DependentUpon>FrmManTipoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FrmSucursal.Designer.cs">
+      <DependentUpon>FrmSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIAlmacenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIAlmacenero.Designer.cs">
+      <DependentUpon>MDIAlmacenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIPrincipal.Designer.cs">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPrincipalUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIPrincipalUsuario.Designer.cs">
+      <DependentUpon>MDIPrincipalUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIUsuarioNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIUsuarioNormal.Designer.cs">
+      <DependentUpon>MDIUsuarioNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FrmMenuAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FrmMenuAdministrador.Designer.cs">
+      <DependentUpon>FrmMenuAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FrmMenuAlmacenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FrmMenuAlmacenero.Designer.cs">
+      <DependentUpon>FrmMenuAlmacenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FrmMenuUAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FrmMenuUAdmin.Designer.cs">
+      <DependentUpon>FrmMenuUAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FrmMenuUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FrmMenuUsuario.Designer.cs">
+      <DependentUpon>FrmMenuUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\FrmReporteGanancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteGanancia.Designer.cs">
+      <DependentUpon>FrmReporteGanancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporteGanancia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteGanancia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Acesso\FrmCargar.resx">
+      <DependentUpon>FrmCargar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acesso\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acesso\FrmPorxLogin.resx">
+      <DependentUpon>FrmPorxLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmAyuda.resx">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmBusVentaGeneral.resx">
+      <DependentUpon>FrmBusVentaGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConAdelanto.resx">
+      <DependentUpon>FrmConAdelanto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConAlmTiendaAdmin.resx">
+      <DependentUpon>FrmConAlmTiendaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConGasto.resx">
+      <DependentUpon>FrmConGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConPendiente.resx">
+      <DependentUpon>FrmConPendiente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConPrestamo.resx">
+      <DependentUpon>FrmConPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConProveedor.resx">
+      <DependentUpon>FrmConProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConSarandeo.resx">
+      <DependentUpon>FrmConSarandeo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConSarandeoGeneral.resx">
+      <DependentUpon>FrmConSarandeoGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultaAdelanto.resx">
+      <DependentUpon>FrmConsultaAdelanto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConVentaGeneral.resx">
+      <DependentUpon>FrmConVentaGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConCompras.resx">
+      <DependentUpon>FrmConCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlmacen.resx">
+      <DependentUpon>FrmAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlmacenGeneral.resx">
+      <DependentUpon>FrmAlmacenGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlmGenConfirm.resx">
+      <DependentUpon>FrmAlmGenConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCaja.resx">
+      <DependentUpon>FrmCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfirmacion.resx">
+      <DependentUpon>FrmConfirmacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetAdelanto.resx">
+      <DependentUpon>FrmDetAdelanto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetPrestamo.resx">
+      <DependentUpon>FrmDetPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenerarCompra.resx">
+      <DependentUpon>FrmGenerarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMezclarProducto.resx">
+      <DependentUpon>FrmMezclarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamo.resx">
+      <DependentUpon>FrmPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegGasto.resx">
+      <DependentUpon>FrmRegGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSarandeo.resx">
+      <DependentUpon>FrmSarandeo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentaGeneral.resx">
+      <DependentUpon>FrmVentaGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impresion.resx">
+      <DependentUpon>Impresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmManCargo.resx">
+      <DependentUpon>FrmManCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmManCliente.resx">
+      <DependentUpon>FrmManCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmManPersonal.resx">
+      <DependentUpon>FrmManPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmManProducto.resx">
+      <DependentUpon>FrmManProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmManProveedor.resx">
+      <DependentUpon>FrmManProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmManTipoGasto.resx">
+      <DependentUpon>FrmManTipoGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmManTipoProducto.resx">
+      <DependentUpon>FrmManTipoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FrmSucursal.resx">
+      <DependentUpon>FrmSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIAlmacenero.resx">
+      <DependentUpon>MDIAlmacenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPrincipalUsuario.resx">
+      <DependentUpon>MDIPrincipalUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIUsuarioNormal.resx">
+      <DependentUpon>MDIUsuarioNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FrmMenuAdministrador.resx">
+      <DependentUpon>FrmMenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FrmMenuAlmacenero.resx">
+      <DependentUpon>FrmMenuAlmacenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FrmMenuUAdmin.resx">
+      <DependentUpon>FrmMenuUAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FrmMenuUsuario.resx">
+      <DependentUpon>FrmMenuUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\FrmReporteGanancia.resx">
+      <DependentUpon>FrmReporteGanancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporteGanancia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteGanancia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="fotos\Recursos visual basic.url" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{c577a622-911b-4b87-94fb-3a439986c98a}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{473734a2-b334-44a5-99e4-f94d1f2a21ea}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fotos\16 %28Acrobat%29.ico" />
+    <Content Include="fotos\16 %28Address book%29.ico" />
+    <Content Include="fotos\16 %28Adjust colour%29.ico" />
+    <Content Include="fotos\16 %28Align center%29.ico" />
+    <Content Include="fotos\16 %28Align center-2%29.ico" />
+    <Content Include="fotos\16 %28Align center-3%29.ico" />
+    <Content Include="fotos\16 %28Align center-4%29.ico" />
+    <Content Include="fotos\16 %28Align full%29.ico" />
+    <Content Include="fotos\16 %28Align full-2%29.ico" />
+    <Content Include="fotos\16 %28Align full-3%29.ico" />
+    <Content Include="fotos\16 %28Align full-4%29.ico" />
+    <Content Include="fotos\16 %28Align left%29.ico" />
+    <Content Include="fotos\16 %28Align left-2%29.ico" />
+    <Content Include="fotos\16 %28Align left-3%29.ico" />
+    <Content Include="fotos\16 %28Align left-4%29.ico" />
+    <Content Include="fotos\16 %28Align right%29.ico" />
+    <Content Include="fotos\16 %28Align right-2%29.ico" />
+    <Content Include="fotos\16 %28Align right-3%29.ico" />
+    <Content Include="fotos\16 %28Align right-4%29.ico" />
+    <Content Include="fotos\16 %28Arrow first%29.ico" />
+    <Content Include="fotos\16 %28Arrow last%29.ico" />
+    <Content Include="fotos\16 %28At%29.ico" />
+    <Content Include="fotos\16 %28Attach%29.ico" />
+    <Content Include="fotos\16 %28Autoformat document%29.ico" />
+    <Content Include="fotos\16 %28Autoformat grid%29.ico" />
+    <Content Include="fotos\16 %28Autoformat spreadsheet%29.ico" />
+    <Content Include="fotos\16 %28Back%29.ico" />
+    <Content Include="fotos\16 %28Background color%29.ico" />
+    <Content Include="fotos\16 %28Bar chart%29.ico" />
+    <Content Include="fotos\16 %28Bar chart-2%29.ico" />
+    <Content Include="fotos\16 %28Barcode%29.ico" />
+    <Content Include="fotos\16 %28Binoculars next%29.ico" />
+    <Content Include="fotos\16 %28Binoculars replace%29.ico" />
+    <Content Include="fotos\16 %28Binoculars-2%29.ico" />
+    <Content Include="fotos\16 %28Bold%29.ico" />
+    <Content Include="fotos\16 %28Bold-2%29.ico" />
+    <Content Include="fotos\16 %28Border btm%29.ico" />
+    <Content Include="fotos\16 %28Border dbl btm%29.ico" />
+    <Content Include="fotos\16 %28Border grid%29.ico" />
+    <Content Include="fotos\16 %28Border inner horiz%29.ico" />
+    <Content Include="fotos\16 %28Border inner vert%29.ico" />
+    <Content Include="fotos\16 %28Border inside%29.ico" />
+    <Content Include="fotos\16 %28Border left%29.ico" />
+    <Content Include="fotos\16 %28Border none%29.ico" />
+    <Content Include="fotos\16 %28Border out%29.ico" />
+    <Content Include="fotos\16 %28Border right%29.ico" />
+    <Content Include="fotos\16 %28Border thick out%29.ico" />
+    <Content Include="fotos\16 %28Border thick%29.ico" />
+    <Content Include="fotos\16 %28Border top dbl%29.ico" />
+    <Content Include="fotos\16 %28Border top thick%29.ico" />
+    <Content Include="fotos\16 %28Border top%29.ico" />
+    <Content Include="fotos\16 %28Border top-btm%29.ico" />
+    <Content Include="fotos\16 %28Borders%29.ico" />
+    <Content Include="fotos\16 %28Box closed%29.ico" />
+    <Content Include="fotos\16 %28Box open%29.ico" />
+    <Content Include="fotos\16 %28Box_checked%29.ico" />
+    <Content Include="fotos\16 %28Box_checked_all%29.ico" />
+    <Content Include="fotos\16 %28Box_checked_all_over%29.ico" />
+    <Content Include="fotos\16 %28Box_checked_over%29.ico" />
+    <Content Include="fotos\16 %28Box_grayed%29.ico" />
+    <Content Include="fotos\16 %28Box_grayed_all_over%29.ico" />
+    <Content Include="fotos\16 %28Box_grayed_over%29.ico" />
+    <Content Include="fotos\16 %28Box_select_all%29.ico" />
+    <Content Include="fotos\16 %28Box_select_all_over%29.ico" />
+    <Content Include="fotos\16 %28Box_unchecked%29.ico" />
+    <Content Include="fotos\16 %28Box_unchecked_all%29.ico" />
+    <Content Include="fotos\16 %28Box_unchecked_all_over%29.ico" />
+    <Content Include="fotos\16 %28Box_unchecked_over%29.ico" />
+    <Content Include="fotos\16 %28Briefcase%29.ico" />
+    <Content Include="fotos\16 %28Build%29.ico" />
+    <Content Include="fotos\16 %28Bullets 2%29.ico" />
+    <Content Include="fotos\16 %28Bullets and numbering%29.ico" />
+    <Content Include="fotos\16 %28Bullets%29.ico" />
+    <Content Include="fotos\16 %28Bullets-3%29.ico" />
+    <Content Include="fotos\16 %28Cabinet%29.ico" />
+    <Content Include="fotos\16 %28Calculator%29.ico" />
+    <Content Include="fotos\16 %28Calendar 1%29.ico" />
+    <Content Include="fotos\16 %28Calendar 2%29.ico" />
+    <Content Include="fotos\16 %28Calendar%29.ico" />
+    <Content Include="fotos\16 %28Camera%29.ico" />
+    <Content Include="fotos\16 %28Cancel%29.ico" />
+    <Content Include="fotos\16 %28Car%29.ico" />
+    <Content Include="fotos\16 %28Card copy%29.ico" />
+    <Content Include="fotos\16 %28Card delete%29.ico" />
+    <Content Include="fotos\16 %28Card edit%29.ico" />
+    <Content Include="fotos\16 %28Card file%29.ico" />
+    <Content Include="fotos\16 %28Card mark%29.ico" />
+    <Content Include="fotos\16 %28Card new%29.ico" />
+    <Content Include="fotos\16 %28Card update%29.ico" />
+    <Content Include="fotos\16 %28Card view marked%29.ico" />
+    <Content Include="fotos\16 %28Case capitalize%29.ico" />
+    <Content Include="fotos\16 %28Case lower%29.ico" />
+    <Content Include="fotos\16 %28Case toggle%29.ico" />
+    <Content Include="fotos\16 %28Case upper%29.ico" />
+    <Content Include="fotos\16 %28Center across cells%29.ico" />
+    <Content Include="fotos\16 %28Clear%29.ico" />
+    <Content Include="fotos\16 %28Clipboard%29.ico" />
+    <Content Include="fotos\16 %28Clock%29.ico" />
+    <Content Include="fotos\16 %28Clock-2%29.ico" />
+    <Content Include="fotos\16 %28Close%29.ico" />
+    <Content Include="fotos\16 %28Close-2%29.ico" />
+    <Content Include="fotos\16 %28Cog%29.ico" />
+    <Content Include="fotos\16 %28Color picker%29.ico" />
+    <Content Include="fotos\16 %28Combo%29.ico" />
+    <Content Include="fotos\16 %28Command prompt%29.ico" />
+    <Content Include="fotos\16 %28Compile%29.ico" />
+    <Content Include="fotos\16 %28Computer%29.ico" />
+    <Content Include="fotos\16 %28Configure%29.ico" />
+    <Content Include="fotos\16 %28Connect-3%29.ico" />
+    <Content Include="fotos\16 %28Contents%29.ico" />
+    <Content Include="fotos\16 %28Convert%29.ico" />
+    <Content Include="fotos\16 %28Copy image%29.ico" />
+    <Content Include="fotos\16 %28Copy plus%29.ico" />
+    <Content Include="fotos\16 %28Copy%29.ico" />
+    <Content Include="fotos\16 %28Credit card%29.ico" />
+    <Content Include="fotos\16 %28Crop%29.ico" />
+    <Content Include="fotos\16 %28Currency%29.ico" />
+    <Content Include="fotos\16 %28Cut%29.ico" />
+    <Content Include="fotos\16 %28Cut-2%29.ico" />
+    <Content Include="fotos\16 %28Database add%29.ico" />
+    <Content Include="fotos\16 %28Database close%29.ico" />
+    <Content Include="fotos\16 %28Database edit%29.ico" />
+    <Content Include="fotos\16 %28Database import%29.ico" />
+    <Content Include="fotos\16 %28Database open%29.ico" />
+    <Content Include="fotos\16 %28Database remove%29.ico" />
+    <Content Include="fotos\16 %28Database security%29.ico" />
+    <Content Include="fotos\16 %28Database%29.ico" />
+    <Content Include="fotos\16 %28Date and time%29.ico" />
+    <Content Include="fotos\16 %28Date and time-2%29.ico" />
+    <Content Include="fotos\16 %28Db cancel%29.ico" />
+    <Content Include="fotos\16 %28Db delete%29.ico" />
+    <Content Include="fotos\16 %28Db edit%29.ico" />
+    <Content Include="fotos\16 %28Db first%29.ico" />
+    <Content Include="fotos\16 %28Db insert%29.ico" />
+    <Content Include="fotos\16 %28Db last%29.ico" />
+    <Content Include="fotos\16 %28Db next%29.ico" />
+    <Content Include="fotos\16 %28Db post%29.ico" />
+    <Content Include="fotos\16 %28Db previous%29.ico" />
+    <Content Include="fotos\16 %28Db refresh%29.ico" />
+    <Content Include="fotos\16 %28Decimals decrease%29.ico" />
+    <Content Include="fotos\16 %28Decimals increase%29.ico" />
+    <Content Include="fotos\16 %28Delete%29.ico" />
+    <Content Include="fotos\16 %28Delete_over%29.ico" />
+    <Content Include="fotos\16 %28Design%29.ico" />
+    <Content Include="fotos\16 %28Dialog%29.ico" />
+    <Content Include="fotos\16 %28Disconnect-3%29.ico" />
+    <Content Include="fotos\16 %28Doc access%29.ico" />
+    <Content Include="fotos\16 %28Doc excel%29.ico" />
+    <Content Include="fotos\16 %28Doc pdf%29.ico" />
+    <Content Include="fotos\16 %28Doc word%29.ico" />
+    <Content Include="fotos\16 %28Download and open%29.ico" />
+    <Content Include="fotos\16 %28Edit%29.ico" />
+    <Content Include="fotos\16 %28Edit-2%29.ico" />
+    <Content Include="fotos\16 %28Edit-3%29.ico" />
+    <Content Include="fotos\16 %28Empty%29.ico" />
+    <Content Include="fotos\16 %28Envelope%29.ico" />
+    <Content Include="fotos\16 %28Execute%29.ico" />
+    <Content Include="fotos\16 %28Exit%29.ico" />
+    <Content Include="fotos\16 %28Favs%29.ico" />
+    <Content Include="fotos\16 %28File add%29.ico" />
+    <Content Include="fotos\16 %28File new 2%29.ico" />
+    <Content Include="fotos\16 %28File new 3%29.ico" />
+    <Content Include="fotos\16 %28File new%29.ico" />
+    <Content Include="fotos\16 %28Fill color%29.ico" />
+    <Content Include="fotos\16 %28Fill down%29.ico" />
+    <Content Include="fotos\16 %28Fill left%29.ico" />
+    <Content Include="fotos\16 %28Fill right%29.ico" />
+    <Content Include="fotos\16 %28Fill up%29.ico" />
+    <Content Include="fotos\16 %28Filter%29.ico" />
+    <Content Include="fotos\16 %28Filter-2%29.ico" />
+    <Content Include="fotos\16 %28Find%29.ico" />
+    <Content Include="fotos\16 %28Flag blue%29.ico" />
+    <Content Include="fotos\16 %28Flag green%29.ico" />
+    <Content Include="fotos\16 %28Flag red%29.ico" />
+    <Content Include="fotos\16 %28Folder add%29.ico" />
+    <Content Include="fotos\16 %28Folder closed%29.ico" />
+    <Content Include="fotos\16 %28Folder download%29.ico" />
+    <Content Include="fotos\16 %28Folder new%29.ico" />
+    <Content Include="fotos\16 %28Folder options%29.ico" />
+    <Content Include="fotos\16 %28Folder search%29.ico" />
+    <Content Include="fotos\16 %28Folder%29.ico" />
+    <Content Include="fotos\16 %28Folders%29.ico" />
+    <Content Include="fotos\16 %28Font color%29.ico" />
+    <Content Include="fotos\16 %28Font format%29.ico" />
+    <Content Include="fotos\16 %28Font size%29.ico" />
+    <Content Include="fotos\16 %28Font style%29.ico" />
+    <Content Include="fotos\16 %28Footer first%29.ico" />
+    <Content Include="fotos\16 %28Footer%29.ico" />
+    <Content Include="fotos\16 %28Format painter%29.ico" />
+    <Content Include="fotos\16 %28Forward%29.ico" />
+    <Content Include="fotos\16 %28Frame%29.ico" />
+    <Content Include="fotos\16 %28Full screen%29.ico" />
+    <Content Include="fotos\16 %28Function%29.ico" />
+    <Content Include="fotos\16 %28Gas can%29.ico" />
+    <Content Include="fotos\16 %28Goto line%29.ico" />
+    <Content Include="fotos\16 %28Goto line-2%29.ico" />
+    <Content Include="fotos\16 %28Goto line-3%29.ico" />
+    <Content Include="fotos\16 %28Grid column delete%29.ico" />
+    <Content Include="fotos\16 %28Grid column delete-2%29.ico" />
+    <Content Include="fotos\16 %28Grid column insert to left-2%29.ico" />
+    <Content Include="fotos\16 %28Grid column insert to right-2%29.ico" />
+    <Content Include="fotos\16 %28Grid column insert%29.ico" />
+    <Content Include="fotos\16 %28Grid column insert-2%29.ico" />
+    <Content Include="fotos\16 %28Grid column width%29.ico" />
+    <Content Include="fotos\16 %28Grid delete%29.ico" />
+    <Content Include="fotos\16 %28Grid merge cells%29.ico" />
+    <Content Include="fotos\16 %28Grid properties%29.ico" />
+    <Content Include="fotos\16 %28Grid row delete%29.ico" />
+    <Content Include="fotos\16 %28Grid row delete-2%29.ico" />
+    <Content Include="fotos\16 %28Grid row height%29.ico" />
+    <Content Include="fotos\16 %28Grid row insert above%29.ico" />
+    <Content Include="fotos\16 %28Grid row insert below%29.ico" />
+    <Content Include="fotos\16 %28Grid row insert%29.ico" />
+    <Content Include="fotos\16 %28Grid row insert-2%29.ico" />
+    <Content Include="fotos\16 %28Grid select cell%29.ico" />
+    <Content Include="fotos\16 %28Grid select cell-2%29.ico" />
+    <Content Include="fotos\16 %28Grid select column%29.ico" />
+    <Content Include="fotos\16 %28Grid select column-2%29.ico" />
+    <Content Include="fotos\16 %28Grid select grid-2%29.ico" />
+    <Content Include="fotos\16 %28Grid select row%29.ico" />
+    <Content Include="fotos\16 %28Grid select row-2%29.ico" />
+    <Content Include="fotos\16 %28Grid split cells%29.ico" />
+    <Content Include="fotos\16 %28Grid%29.ico" />
+    <Content Include="fotos\16 %28Group%29.ico" />
+    <Content Include="fotos\16 %28Guid%29.ico" />
+    <Content Include="fotos\16 %28Hammer%29.ico" />
+    <Content Include="fotos\16 %28Hand point%29.ico" />
+    <Content Include="fotos\16 %28Header and footer next%29.ico" />
+    <Content Include="fotos\16 %28Header and footer previous%29.ico" />
+    <Content Include="fotos\16 %28Header and footer switch%29.ico" />
+    <Content Include="fotos\16 %28Header first%29.ico" />
+    <Content Include="fotos\16 %28Header footer%29.ico" />
+    <Content Include="fotos\16 %28Header%29.ico" />
+    <Content Include="fotos\16 %28Help%29.ico" />
+    <Content Include="fotos\16 %28Help-2%29.ico" />
+    <Content Include="fotos\16 %28Higlighter%29.ico" />
+    <Content Include="fotos\16 %28History%29.ico" />
+    <Content Include="fotos\16 %28Home%29.ico" />
+    <Content Include="fotos\16 %28Idcard%29.ico" />
+    <Content Include="fotos\16 %28Indent decrease%29.ico" />
+    <Content Include="fotos\16 %28Indent decrease-2%29.ico" />
+    <Content Include="fotos\16 %28Indent decrease-3%29.ico" />
+    <Content Include="fotos\16 %28Indent increase%29.ico" />
+    <Content Include="fotos\16 %28Indent increase-2%29.ico" />
+    <Content Include="fotos\16 %28Indent increase-3%29.ico" />
+    <Content Include="fotos\16 %28Information%29.ico" />
+    <Content Include="fotos\16 %28Information-2%29.ico" />
+    <Content Include="fotos\16 %28Information-3%29.ico" />
+    <Content Include="fotos\16 %28Insert bitmap%29.ico" />
+    <Content Include="fotos\16 %28Insert file%29.ico" />
+    <Content Include="fotos\16 %28Insert file-2%29.ico" />
+    <Content Include="fotos\16 %28Internet%29.ico" />
+    <Content Include="fotos\16 %28Italic%29.ico" />
+    <Content Include="fotos\16 %28Italic-2%29.ico" />
+    <Content Include="fotos\16 %28Key%29.ico" />
+    <Content Include="fotos\16 %28Line style%29.ico" />
+    <Content Include="fotos\16 %28Line style-2%29.ico" />
+    <Content Include="fotos\16 %28Line style-3%29.ico" />
+    <Content Include="fotos\16 %28Link%29.ico" />
+    <Content Include="fotos\16 %28Lock off%29.ico" />
+    <Content Include="fotos\16 %28Lock on%29.ico" />
+    <Content Include="fotos\16 %28Mail style-2%29.ico" />
+    <Content Include="fotos\16 %28Mail%29.ico" />
+    <Content Include="fotos\16 %28Menu_a%29.ico" />
+    <Content Include="fotos\16 %28Menu_popup%29.ico" />
+    <Content Include="fotos\16 %28Microphone%29.ico" />
+    <Content Include="fotos\16 %28Minus%29.ico" />
+    <Content Include="fotos\16 %28Minus_over%29.ico" />
+    <Content Include="fotos\16 %28Money bag%29.ico" />
+    <Content Include="fotos\16 %28Move to%29.ico" />
+    <Content Include="fotos\16 %28Move tool%29.ico" />
+    <Content Include="fotos\16 %28Movie%29.ico" />
+    <Content Include="fotos\16 %28Next-set 2%29.ico" />
+    <Content Include="fotos\16 %28Numbering-2%29.ico" />
+    <Content Include="fotos\16 %28Numbers%29.ico" />
+    <Content Include="fotos\16 %28Object bring to front%29.ico" />
+    <Content Include="fotos\16 %28Object bring to front-2%29.ico" />
+    <Content Include="fotos\16 %28Object send to back%29.ico" />
+    <Content Include="fotos\16 %28Object send to back-2%29.ico" />
+    <Content Include="fotos\16 %28Ok%29.ico" />
+    <Content Include="fotos\16 %28Open%29.ico" />
+    <Content Include="fotos\16 %28Options%29.ico" />
+    <Content Include="fotos\16 %28Options-2%29.ico" />
+    <Content Include="fotos\16 %28Page break%29.ico" />
+    <Content Include="fotos\16 %28Page next%29.ico" />
+    <Content Include="fotos\16 %28Page number%29.ico" />
+    <Content Include="fotos\16 %28Page numbers%29.ico" />
+    <Content Include="fotos\16 %28Page previous%29.ico" />
+    <Content Include="fotos\16 %28Page setup%29.ico" />
+    <Content Include="fotos\16 %28Paste%29.ico" />
+    <Content Include="fotos\16 %28Pen tool%29.ico" />
+    <Content Include="fotos\16 %28Pencil tool%29.ico" />
+    <Content Include="fotos\16 %28Percent%29.ico" />
+    <Content Include="fotos\16 %28Pie chart%29.ico" />
+    <Content Include="fotos\16 %28Play%29.ico" />
+    <Content Include="fotos\16 %28Plus favorites%29.ico" />
+    <Content Include="fotos\16 %28Plus%29.ico" />
+    <Content Include="fotos\16 %28Plus_over%29.ico" />
+    <Content Include="fotos\16 %28Plus_over2%29.ico" />
+    <Content Include="fotos\16 %28Previous-set 2%29.ico" />
+    <Content Include="fotos\16 %28Print preview%29.ico" />
+    <Content Include="fotos\16 %28Print%29.ico" />
+    <Content Include="fotos\16 %28Printer setup%29.ico" />
+    <Content Include="fotos\16 %28Quarantine%29.ico" />
+    <Content Include="fotos\16 %28Quick info%29.ico" />
+    <Content Include="fotos\16 %28Record%29.ico" />
+    <Content Include="fotos\16 %28Recycle bin%29.ico" />
+    <Content Include="fotos\16 %28Redo%29.ico" />
+    <Content Include="fotos\16 %28Refresh%29.ico" />
+    <Content Include="fotos\16 %28Refuse%29.ico" />
+    <Content Include="fotos\16 %28Rename%29.ico" />
+    <Content Include="fotos\16 %28Repeat%29.ico" />
+    <Content Include="fotos\16 %28Report%29.ico" />
+    <Content Include="fotos\16 %28Ruler%29.ico" />
+    <Content Include="fotos\16 %28Ruler-2%29.ico" />
+    <Content Include="fotos\16 %28Save all%29.ico" />
+    <Content Include="fotos\16 %28Save and upload%29.ico" />
+    <Content Include="fotos\16 %28Save as html%29.ico" />
+    <Content Include="fotos\16 %28Save as pdf%29.ico" />
+    <Content Include="fotos\16 %28Save as%29.ico" />
+    <Content Include="fotos\16 %28Save%29.ico" />
+    <Content Include="fotos\16 %28Screen%29.ico" />
+    <Content Include="fotos\16 %28Search%29.ico" />
+    <Content Include="fotos\16 %28Searchnext%29.ico" />
+    <Content Include="fotos\16 %28Select all%29.ico" />
+    <Content Include="fotos\16 %28Select color%29.ico" />
+    <Content Include="fotos\16 %28Settings%29.ico" />
+    <Content Include="fotos\16 %28Show all formatting%29.ico" />
+    <Content Include="fotos\16 %28Sort asc%29.ico" />
+    <Content Include="fotos\16 %28Sort asc-2%29.ico" />
+    <Content Include="fotos\16 %28Sort desc%29.ico" />
+    <Content Include="fotos\16 %28Sort desc-2%29.ico" />
+    <Content Include="fotos\16 %28Speaker%29.ico" />
+    <Content Include="fotos\16 %28Spelling%29.ico" />
+    <Content Include="fotos\16 %28Stop-2%29.ico" />
+    <Content Include="fotos\16 %28Strikeout%29.ico" />
+    <Content Include="fotos\16 %28Strikeout-2%29.ico" />
+    <Content Include="fotos\16 %28Sum%29.ico" />
+    <Content Include="fotos\16 %28Summary%29.ico" />
+    <Content Include="fotos\16 %28Symbol%29.ico" />
+    <Content Include="fotos\16 %28Syntax highlight%29.ico" />
+    <Content Include="fotos\16 %28Tab center%29.ico" />
+    <Content Include="fotos\16 %28Tab decimal%29.ico" />
+    <Content Include="fotos\16 %28Tab left%29.ico" />
+    <Content Include="fotos\16 %28Tab right%29.ico" />
+    <Content Include="fotos\16 %28Thumbs up%29.ico" />
+    <Content Include="fotos\16 %28Tick%29.ico" />
+    <Content Include="fotos\16 %28Timeline%29.ico" />
+    <Content Include="fotos\16 %28Tips%29.ico" />
+    <Content Include="fotos\16 %28Tools%29.ico" />
+    <Content Include="fotos\16 %28Treeview add%29.ico" />
+    <Content Include="fotos\16 %28Treeview delete%29.ico" />
+    <Content Include="fotos\16 %28Treeview edit%29.ico" />
+    <Content Include="fotos\16 %28Treeview%29.ico" />
+    <Content Include="fotos\16 %28Underline%29.ico" />
+    <Content Include="fotos\16 %28Underline-2%29.ico" />
+    <Content Include="fotos\16 %28Undo%29.ico" />
+    <Content Include="fotos\16 %28Up%29.ico" />
+    <Content Include="fotos\16 %28User add%29.ico" />
+    <Content Include="fotos\16 %28User delete%29.ico" />
+    <Content Include="fotos\16 %28User edit%29.ico" />
+    <Content Include="fotos\16 %28User%29.ico" />
+    <Content Include="fotos\16 %28Users%29.ico" />
+    <Content Include="fotos\16 %28Vbchildform%29.ico" />
+    <Content Include="fotos\16 %28Vbform%29.ico" />
+    <Content Include="fotos\16 %28Vbmdiform%29.ico" />
+    <Content Include="fotos\16 %28Videocamera%29.ico" />
+    <Content Include="fotos\16 %28View - details%29.ico" />
+    <Content Include="fotos\16 %28View - large icons%29.ico" />
+    <Content Include="fotos\16 %28View - list%29.ico" />
+    <Content Include="fotos\16 %28View - small icons%29.ico" />
+    <Content Include="fotos\16 %28View full page-2%29.ico" />
+    <Content Include="fotos\16 %28View full page-3%29.ico" />
+    <Content Include="fotos\16 %28View normal%29.ico" />
+    <Content Include="fotos\16 %28View page width-2%29.ico" />
+    <Content Include="fotos\16 %28View page width-3%29.ico" />
+    <Content Include="fotos\16 %28Views%29.ico" />
+    <Content Include="fotos\16 %28Volume%29.ico" />
+    <Content Include="fotos\16 %28Volume-2%29.ico" />
+    <Content Include="fotos\16 %28Warning%29.ico" />
+    <Content Include="fotos\16 %28Window - arrange all%29.ico" />
+    <Content Include="fotos\16 %28Window - cascade%29.ico" />
+    <Content Include="fotos\16 %28Window minimize all%29.ico" />
+    <Content Include="fotos\16 %28Window next%29.ico" />
+    <Content Include="fotos\16 %28Window plus%29.ico" />
+    <Content Include="fotos\16 %28Window previous%29.ico" />
+    <Content Include="fotos\16 %28Window split%29.ico" />
+    <Content Include="fotos\16 %28Window tile vert%29.ico" />
+    <Content Include="fotos\16 %28Window tile%29.ico" />
+    <Content Include="fotos\16 %28Window%29.ico" />
+    <Content Include="fotos\16 %28Wizard%29.ico" />
+    <Content Include="fotos\16 %28Xp%29.ico" />
+    <Content Include="fotos\16 %28Zoom in%29.ico" />
+    <Content Include="fotos\16 %28Zoom in2%29.ico" />
+    <Content Include="fotos\16 %28Zoom out%29.ico" />
+    <Content Include="fotos\16 %28Zoom out2%29.ico" />
+    <Content Include="fotos\16 %28Zoom%29.ico" />
+    <Content Include="fotos\16 %28Zoom-2%29.ico" />
+    <Content Include="fotos\6619068-caduceo-el-icono-en-la-ilustracion-original-de-metal-internet-button.jpg" />
+    <Content Include="fotos\6619068_caduceo_el_icono_en_la_ilustracion_origina.ico" />
+    <Content Include="fotos\7494380-caduceo-icono-en-el-boton-de-internet-plaza-negro-ilustracion-original.jpg" />
+    <Content Include="fotos\activate.png" />
+    <Content Include="fotos\Actualizar.png" />
+    <Content Include="fotos\almacen.png" />
+    <Content Include="fotos\caja.png" />
+    <Content Include="fotos\cliente1.jpg" />
+    <Content Include="fotos\cliente10.jpg" />
+    <Content Include="fotos\cliente11.jpg" />
+    <Content Include="fotos\cliente12.jpg" />
+    <Content Include="fotos\cliente13.jpg" />
+    <Content Include="fotos\cliente14.jpg" />
+    <Content Include="fotos\cliente15.jpg" />
+    <Content Include="fotos\cliente16.jpg" />
+    <Content Include="fotos\cliente17.jpg" />
+    <Content Include="fotos\cliente18.jpg" />
+    <Content Include="fotos\cliente19.jpg" />
+    <Content Include="fotos\cliente2.jpg" />
+    <Content Include="fotos\cliente20.jpg" />
+    <Content Include="fotos\cliente3.jpg" />
+    <Content Include="fotos\cliente4.jpg" />
+    <Content Include="fotos\cliente5.jpg" />
+    <Content Include="fotos\cliente6.jpg" />
+    <Content Include="fotos\cliente7.jpg" />
+    <Content Include="fotos\cliente8.jpg" />
+    <Content Include="fotos\cliente9.jpg" />
+    <Content Include="fotos\computacion.png" />
+    <Content Include="fotos\Control-Panel-icon.png" />
+    <Content Include="fotos\depositphotos_111266426-stock-illustration-industrial-equipment-machine-vector-icon.jpg" />
+    <Content Include="fotos\diagrama de clases.png" />
+    <Content Include="fotos\Dr-House-icon.png" />
+    <Content Include="fotos\dr_house11.jpg" />
+    <Content Include="fotos\empleado1.jpg" />
+    <Content Include="fotos\empleado2.jpg" />
+    <Content Include="fotos\empleado3.jpg" />
+    <Content Include="fotos\Empleado4.jpg" />
+    <Content Include="fotos\escudo_usuario.png" />
+    <Content Include="fotos\Ethernet_Switch_5_Port_10_1.jpg" />
+    <Content Include="fotos\ficha.gif" />
+    <Content Include="fotos\Ficha_Hospital.png" />
+    <Content Include="fotos\FOTO01.BMP" />
+    <Content Include="fotos\FOTO02.BMP" />
+    <Content Include="fotos\FOTO03.BMP" />
+    <Content Include="fotos\FOTO04.BMP" />
+    <Content Include="fotos\FOTO05.BMP" />
+    <Content Include="fotos\FOTO06.BMP" />
+    <Content Include="fotos\F_accidente.png" />
+    <Content Include="fotos\house.jpg" />
+    <Content Include="fotos\housemd.gif" />
+    <Content Include="fotos\ICO REME.ico" />
+    <Content Include="fotos\icono.ico" />
+    <Content Include="fotos\icono.png" />
+    <Content Include="fotos\icono_login.png" />
+    <Content Include="fotos\ico_medicina.png" />
+    <Content Include="fotos\ico_prepaga.gif" />
+    <Content Include="fotos\Imagen1.png" />
+    <Content Include="fotos\LogoMinTrabajoPeru.jpg" />
+    <Content Include="fotos\los-diferentes-logos-de-la-medicina-15.jpg" />
+    <Content Include="fotos\NDJZJELAFY_20161028180301.jpg" />
+    <Content Include="fotos\NET_Logo_6.jpg" />
+    <Content Include="fotos\no_disponible.jpg" />
+    <Content Include="fotos\pendiente.png" />
+    <Content Include="fotos\Preview Docment.ico" />
+    <Content Include="fotos\pro.png" />
+    <Content Include="fotos\procesar.jpg" />
+    <Content Include="fotos\ra.gif" />
+    <None Include="fotos\Rectangulo.png" />
+    <Content Include="fotos\reports_icon.png" />
+    <Content Include="fotos\servidores.jpg" />
+    <Content Include="fotos\sinfoto.JPG" />
+    <Content Include="fotos\usuario.png" />
+    <Content Include="fotos\vs2010logo_transparent_large.png" />
+    <Content Include="fotos\windows-phone-8-logo-new.png" />
+    <Content Include="fotos\windows_phone_8_logo_new.ico" />
+    <Content Include="fotos\[pictures.4ever.eu] dr house 167422 %281%29.jpg" />
+    <Content Include="Iconos\1373052470_basket_delete.png" />
+    <Content Include="Iconos\1373052731_basket_add.png" />
+    <Content Include="Iconos\1373059498_basket_edit.png" />
+    <Content Include="Iconos\aceptar.jpg" />
+    <Content Include="Iconos\agregarcantidad.png" />
+    <Content Include="Iconos\almacen.ico" />
+    <Content Include="Iconos\area.jpg" />
+    <None Include="Iconos\ayuda.ico" />
+    <Content Include="Iconos\backup.png" />
+    <Content Include="Iconos\boleta.png" />
+    <Content Include="Iconos\botonbuscar.jpg" />
+    <Content Include="Iconos\buscar.png" />
+    <Content Include="Iconos\buscarbk.gif" />
+    <Content Include="Iconos\buscarbk.jpg" />
+    <Content Include="Iconos\caja.ico" />
+    <Content Include="Iconos\cancel.png" />
+    <Content Include="Iconos\cancelar.jpg" />
+    <Content Include="Iconos\cargo.jpg" />
+    <Content Include="Iconos\cerrar.png" />
+    <Content Include="Iconos\cerrar2.png" />
+    <Content Include="Iconos\cerrar_sesion.png" />
+    <Content Include="Iconos\cita.jpg" />
+    <Content Include="Iconos\cita_año.jpg" />
+    <Content Include="Iconos\cita_reservada.png" />
+    <Content Include="Iconos\cliente.ico" />
+    <Content Include="Iconos\Close_Icon.png" />
+    <Content Include="Iconos\compras.ico" />
+    <Content Include="Iconos\compras.jpg" />
+    <Content Include="Iconos\comprobante_examen.jpg" />
+    <Content Include="Iconos\con prove.ico" />
+    <Content Include="Iconos\consulta_empleado.png" />
+    <Content Include="Iconos\conventas.ico" />
+    <Content Include="Iconos\crear.jpg" />
+    <Content Include="Iconos\delete.png" />
+    <Content Include="Iconos\disminuir cantidad.jpg" />
+    <Content Include="Iconos\edit.ico" />
+    <Content Include="Iconos\editar.png" />
+    <Content Include="Iconos\eliminar.png" />
+    <Content Include="Iconos\empleado.jpg" />
+    <Content Include="Iconos\especialidad.jpg" />
+    <Content Include="Iconos\examen.gif" />
+    <Content Include="Iconos\exit.png" />
+    <Content Include="Iconos\factura.GIF" />
+    <Content Include="Iconos\factura_compra.png" />
+    <Content Include="Iconos\flecha-derecha[151].png" />
+    <Content Include="Iconos\general.jpg" />
+    <Content Include="Iconos\generar comprobante.jpg" />
+    <Content Include="Iconos\horario_medico.jpg" />
+    <Content Include="Iconos\icono-paciente.png" />
+    <Content Include="Iconos\Icons-Land-Medical-Equipment-Microscope.ico" />
+    <Content Include="Iconos\imprimir.gif" />
+    <Content Include="Iconos\lock.png" />
+    <Content Include="Iconos\login-icon.ico" />
+    <Content Include="Iconos\login-icon.png" />
+    <Content Include="Iconos\logo.png" />
+    <Content Include="Iconos\mantenimiento_analisis_clinicos.jpg" />
+    <Content Include="Iconos\mantenimiento_empleado.jpg" />
+    <Content Include="Iconos\mantenimiento_medico.jpg" />
+    <Content Include="Iconos\marca.jpg" />
+    <Content Include="Iconos\medicos.jpg" />
+    <Content Include="Iconos\minimizar2.png" />
+    <Content Include="Iconos\Minimize_Icon.png" />
+    <Content Include="Iconos\montoncito.ico" />
+    <Content Include="Iconos\montoncito.png" />
+    <Content Include="Iconos\new.png" />
+    <Content Include="Iconos\orden_atencion.jpg" />
+    <Content Include="Iconos\orden_compra.jpg" />
+    <Content Include="Iconos\orden_cotizacion.jpg" />
+    <Content Include="Iconos\pacientes.jpg" />
+    <Content Include="Iconos\persona_juridica.jpg" />
+    <Content Include="Iconos\persona_natural.jpg" />
+    <Content Include="Iconos\producto.jpg" />
+    <Content Include="Iconos\producto.png" />
+    <Content Include="Iconos\proveedor.ico" />
+    <Content Include="Iconos\proveedor.jpg" />
+    <None Include="Iconos\rectangulos2.png" />
+    <Content Include="Iconos\reoprtes.jpg" />
+    <Content Include="Iconos\reporte_agotar.jpg" />
+    <Content Include="Iconos\reporte_citas_especialidad.jpg" />
+    <Content Include="Iconos\reporte_cita_historiaclinica.png" />
+    <Content Include="Iconos\reporte_cita_reservada.jpg" />
+    <Content Include="Iconos\reporte_historiaclinica_paciente.jpg" />
+    <Content Include="Iconos\reporte_paciente_especialidad.jpg" />
+    <Content Include="Iconos\reporte_precio_proveedor.jpg" />
+    <Content Include="Iconos\restringir.png" />
+    <Content Include="Iconos\resultados_examen.jpg" />
+    <Content Include="Iconos\rol %281%29.png" />
+    <Content Include="Iconos\rol.png" />
+    <Content Include="Iconos\salir.ico" />
+    <Content Include="Iconos\salir.jpg" />
+    <None Include="Iconos\salir2.ico" />
+    <None Include="Iconos\salir23.ico" />
+    <Content Include="Iconos\salir_sistema.jpg" />
+    <Content Include="Iconos\sarandeo.ico" />
+    <Content Include="Iconos\save.png" />
+    <Content Include="Iconos\Search_24x24.ico" />
+    <Content Include="Iconos\seguridad.jpg" />
+    <None Include="Iconos\show.png" />
+    <Content Include="Iconos\stock_producto.jpg" />
+    <Content Include="Iconos\sucursal.ico" />
+    <Content Include="Iconos\tipoproducto.ico" />
+    <Content Include="Iconos\tipo_insumo.jpg" />
+    <Content Include="Iconos\tipo_proveedor.jpg" />
+    <None Include="Iconos\total.png" />
+    <Content Include="Iconos\unidad_medida.gif" />
+    <Content Include="Iconos\usuario.ico" />
+    <Content Include="Iconos\usuario.jpg" />
+    <None Include="Iconos\ventas.ico" />
+    <Content Include="montoncito.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
